@@ -2,7 +2,7 @@ import './App.css';
 import { createClient } from 'urql';
 import { useEffect, useState } from 'react';
 
-const API_URI = "https://gateway.thegraph.com/api/209db86b1a3686326c0e4f71c8171410/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7";
+const API_URI = `https://gateway.thegraph.com/api/${process.env.REACT_APP_APIKEY}/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7`;
 
 const query = `
 {
@@ -36,6 +36,7 @@ function App() {
       }
      getData();
   },[])
+
 
   return (
     <div >
